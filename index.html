@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calendrier de l'Avent M&G</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              display: ['"Mountains of Christmas"', 'cursive'],
+            },
+            colors: {
+              christmas: {
+                red: '#D42426',
+                green: '#165B33',
+                gold: '#F8B229',
+                cream: '#F0E6D2',
+                dark: '#0F172A'
+              }
+            },
+            animation: {
+              'snow': 'snow 10s linear infinite',
+              'bounce-slow': 'bounce 3s infinite',
+            },
+            keyframes: {
+              snow: {
+                '0%': { transform: 'translateY(-10px)' },
+                '100%': { transform: 'translateY(100vh)' },
+              }
+            }
+          },
+        },
+      }
+    </script>
+    <style>
+      /* Custom scrollbar for webkit */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #0F172A; 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #D42426; 
+        border-radius: 4px;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-christmas-dark text-white min-h-screen">
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
